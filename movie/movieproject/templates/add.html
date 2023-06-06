@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block body%}
+<div style="background-color:#1940BB;">
+<h3>Add movie</h3>
+    </div>
+<form method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+    <table>
+        <tr>
+            <th>Enter the movie name:   </th>
+            <td><input type="text" name="name" placeholder="Enter the Movie name"></td>
+        </tr>
+   <tr>
+            <th>Enter the movie desc:   </th>
+            <td><input type="text" name="desc" placeholder="Enter the Movie desc"></td>
+        </tr>
+           <tr>
+            <th>Enter the movie year:   </th>
+            <td><input type="text" name="year" placeholder="Enter the Movie year"></td>
+        </tr>
+           <tr>
+            <th>Upload the movie image:   </th>
+            <td><input type="FILE" name="img" ></td>
+        </tr>
+
+
+    </table>
+
+    <a href="index.html" ><input type="submit" style="background-color:#119830;"></a>
+
+    </form>
+{% endblock %}
+
